@@ -18,7 +18,6 @@
         crossorigin="anonymous"></script>
 
     <script>
-
         function goDisney() {
             fbq('track', 'Lead');
         }
@@ -27,6 +26,28 @@
             fbq('track', 'Go_telegram');
         }
 
+        // 輪播功能
+        $(document).ready(function(){
+            var images = [
+                'img/banner01.jpg',
+                'img/banner02.jpg',
+                'img/banner03.jpg',
+                'img/banner04.jpg',
+                'img/banner05.jpg',
+            ];
+            var currentIndex = 0;
+            
+            function changeImage() {
+                $('#carousel-image').fadeOut(500, function() {
+                    $(this).attr('src', images[currentIndex]);
+                    $(this).fadeIn(500);
+                });
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            // 每3秒切換一次圖片
+            setInterval(changeImage, 5000);
+        });
     </script>
     <style>
         .brand-color {
@@ -60,6 +81,20 @@
                 max-width: 85px;
             }
         }
+
+        /* 輪播樣式 */
+        #carousel {
+            position: relative;
+            overflow: hidden;
+            margin: 20px auto;
+            max-width: 772px;
+        }
+
+        #carousel-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 
@@ -70,7 +105,7 @@
         <!-- fa-header 頁面版頭 -->
         <header class="fa-header container mx-auto">
             <h1 class="py-5 md:py-6">
-                <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank"
+                <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank"
                     class="indent-hide w-[150px] md:w-[194px] h-[42px] md:h-[54px] bg-no-repeat bg-[url(&#39;../assets/img/logo_home.png&#39;)] bg-contain block mx-auto">ds6688</a>
             </h1>
         </header>
@@ -98,10 +133,10 @@
                     </section>
                     <!-- /cover   封面 -->
                     <!-- functions 功能 -->
-                    <div>
-                        <img src="img/ad100_772x380.png" alt="casino img" class="object-center mx-auto">
-                        <br> <br> <br>
-                    </div>
+                    <a id="carousel" href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
+                        <img id="carousel-image" src="img/banner01.jpg" alt="casino img" class="object-center mx-auto">
+                    </a>
+                    <br>
                     <section
                         class="bg-no-repeat bg-[url(&#39;../assets/img/bg_fuction.png&#39;)] bg-cover mx-8 mb-8 rounded-3xl shadow-[0_0_5px_0_rgba(174,146,255,0.55)]">
 
@@ -109,7 +144,7 @@
                             class="text-sm md:text-base md:text-center leading-normal py-3 md:py-6 md:px-4 md:grid md:grid-cols-5 md:gap-0">
                             <li
                                 class="px-8 md:px-6 pt-4 after:content-[&#39;&#39;] relative after:block after:h-[3px] md:after:h-full md:after:w-[3px] after:mt-4 after:mx-4 md:after:my-auto md:after:mx-0 after:bg-no-repeat after:bg-[url(&#39;../assets/img/line.svg&#39;)] md:after:bg-[url(&#39;../assets/img/vline.svg&#39;)] after:bg-[length:100%_auto] md:after:bg-[length:100%_100%] after:bg-center md:after:absolute md:after:top-0 md:after:bottom-0 md:after:right-0">
-                                <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank">
+                                <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
                                     <section class="flex md:flex-wrap items-center md:justify-center">
                                         <figure
                                             class="w-20 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
@@ -120,11 +155,10 @@
                                             <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">1.前往註冊</h3>
                                         </div>
                                     </section>
-                                </a>
-                            </li>
+                                </a>                            </li>
                             <li
                                 class="px-8 md:px-6 pt-4 after:content-[&#39;&#39;] relative after:block after:h-[3px] md:after:h-full md:after:w-[3px] after:mt-4 after:mx-4 md:after:my-auto md:after:mx-0 after:bg-no-repeat after:bg-[url(&#39;../assets/img/line.svg&#39;)] md:after:bg-[url(&#39;../assets/img/vline.svg&#39;)] after:bg-[length:100%_auto] md:after:bg-[length:100%_100%] after:bg-center md:after:absolute md:after:top-0 md:after:bottom-0 md:after:right-0">
-                                <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank">
+                                <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
                                     <section class="flex md:flex-wrap items-center md:justify-center">
                                         <figure
                                             class="w-20 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
@@ -139,7 +173,7 @@
                             </li>
                             <li
                                 class="px-8 md:px-6 pt-4 after:content-[&#39;&#39;] relative after:block after:h-[3px] md:after:h-full md:after:w-[3px] after:mt-4 after:mx-4 md:after:my-auto md:after:mx-0 after:bg-no-repeat after:bg-[url(&#39;../assets/img/line.svg&#39;)] md:after:bg-[url(&#39;../assets/img/vline.svg&#39;)] after:bg-[length:100%_auto] md:after:bg-[length:100%_100%] after:bg-center md:after:absolute md:after:top-0 md:after:bottom-0 md:after:right-0">
-                                <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank">
+                                <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
                                     <section class="flex md:flex-wrap items-center md:justify-center">
                                         <figure
                                             class="w-20 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
@@ -154,7 +188,7 @@
                             </li>
                             <li
                                 class="px-8 md:px-6 pt-4 after:content-[&#39;&#39;] relative after:block after:h-[3px] md:after:h-full md:after:w-[3px] after:mt-4 after:mx-4 md:after:my-auto md:after:mx-0 after:bg-no-repeat after:bg-[url(&#39;../assets/img/line.svg&#39;)] md:after:bg-[url(&#39;../assets/img/vline.svg&#39;)] after:bg-[length:100%_auto] md:after:bg-[length:100%_100%] after:bg-center md:after:absolute md:after:top-0 md:after:bottom-0 md:after:right-0">
-                                <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank">
+                                <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
                                     <section class="flex md:flex-wrap items-center md:justify-center">
                                         <figure
                                             class="w-20 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
@@ -168,7 +202,7 @@
                                 </a>
                             </li>
                             <li class="px-8 md:px-6 pt-4">
-                                <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank">
+                                <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
                                     <section class="flex md:flex-wrap items-center md:justify-center">
                                         <figure
                                             class="w-20 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
@@ -197,7 +231,7 @@
                 <section class="p-4 text-center">
                     <div class="bg-chat hover:bg-chat_hover shadow-chat rounded-full md:inline-block my-14"
                         style="padding: 0 10px;">
-                        <a href="https://ds6688.ds88hk.net/"
+                        <a href="https://ds6688.ds88hk.net/login?id=register"
                             class="block bg-no-repeat bg-[url(&#39;../assets/img/btn_chat.png&#39;)] bg-contain bg-center"
                             style="width: 300px; height: 87px; text-align: center; margin: 0 auto;"
                             onclick="goDisney()">
@@ -225,7 +259,7 @@
                     class="text-sm md:text-base md:text-center leading-normal py-3 md:py-6 md:px-4 md:grid md:grid-cols-4 md:gap-0">
                     <li
                         class="px-8 md:px-6 pt-4 after:content-[&#39;&#39;] relative after:block after:h-[3px] md:after:h-full md:after:w-[3px] after:mt-4 after:mx-4 md:after:my-auto md:after:mx-0 after:bg-no-repeat after:bg-[url(&#39;../assets/img/line.svg&#39;)] md:after:bg-[url(&#39;../assets/img/vline.svg&#39;)] after:bg-[length:100%_auto] md:after:bg-[length:100%_100%] after:bg-center md:after:absolute md:after:top-0 md:after:bottom-0 md:after:right-0">
-                        <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank">
+                        <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
                             <section class="flex md:flex-wrap items-center md:justify-center">
                                 <figure class="w-15 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
                                     <img src="./img/ic_professional.svg" alt=""
@@ -240,7 +274,7 @@
                     </li>
                     <li
                         class="px-8 md:px-6 pt-4 after:content-[&#39;&#39;] relative after:block after:h-[3px] md:after:h-full md:after:w-[3px] after:mt-4 after:mx-4 md:after:my-auto md:after:mx-0 after:bg-no-repeat after:bg-[url(&#39;../assets/img/line.svg&#39;)] md:after:bg-[url(&#39;../assets/img/vline.svg&#39;)] after:bg-[length:100%_auto] md:after:bg-[length:100%_100%] after:bg-center md:after:absolute md:after:top-0 md:after:bottom-0 md:after:right-0">
-                        <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank">
+                        <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
                             <section class="flex md:flex-wrap items-center md:justify-center">
                                 <figure class="w-15 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
                                     <img src="./img/ic_24hr.svg" alt=""
@@ -255,7 +289,7 @@
                     </li>
                     <li
                         class="px-8 md:px-6 pt-4 after:content-[&#39;&#39;] relative after:block after:h-[3px] md:after:h-full md:after:w-[3px] after:mt-4 after:mx-4 md:after:my-auto md:after:mx-0 after:bg-no-repeat after:bg-[url(&#39;../assets/img/line.svg&#39;)] md:after:bg-[url(&#39;../assets/img/vline.svg&#39;)] after:bg-[length:100%_auto] md:after:bg-[length:100%_100%] after:bg-center md:after:absolute md:after:top-0 md:after:bottom-0 md:after:right-0">
-                        <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank">
+                        <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
                             <section class="flex md:flex-wrap items-center md:justify-center">
                                 <figure class="w-15 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
                                     <img src="./img/ic_Convenient.svg" alt=""
@@ -269,7 +303,7 @@
                         </a>
                     </li>
                     <li class="px-8 md:px-6 py-4">
-                        <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank">
+                        <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
                             <section class="flex md:flex-wrap items-center md:justify-center">
                                 <figure class="w-15 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
                                     <img src="./img/ic_relieved.svg" alt=""
@@ -287,7 +321,7 @@
 
             <center>
                 <div class="bg-chat hover:bg-chat_hover shadow-chat rounded-full md:inline-block my-14">
-                    <a href="https://ds6688.ds88hk.net/"
+                    <a href="https://ds6688.ds88hk.net/login?id=register"
                         class="block h-[87px] md:w-[330px] lg:w-[380px] bg-no-repeat  bg-contain bg-center"
                         style="background-image: url('assets/img/btn_chat_2.png');" onclick="goDisney()">
                     </a>
@@ -341,7 +375,7 @@
                     </h4>
                 </div>
                 <div class="bg-chat hover:bg-chat_hover shadow-chat rounded-full md:inline-block my-14">
-                    <a href="https://ds6688.ds88hk.net/"
+                    <a href="https://ds6688.ds88hk.net/login?id=register"
                         class="block h-[87px] md:w-[330px] lg:w-[380px] bg-no-repeat  bg-contain bg-center"
                         style="background-image: url('assets/img/btn_chat_1.png');" onclick="goDisney()">
                         <span class="inline-block indent-hide">Whatsapp</span>
