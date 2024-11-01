@@ -41,6 +41,16 @@
             max-width: 200px;
         }
 
+        .page-heading{
+            color: #fff;
+            background: linear-gradient(0deg, #FFFFFF 0%, #f5f5f5 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4),
+                         -1px -1px 1px rgba(255, 255, 255, 0.7);
+            /* filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3)); */
+        }
+
         @media (max-width: 768px) {
             .brand-logo img{
                 max-width: 120px;
@@ -73,12 +83,12 @@
                     <!-- cover   封面 -->
                     <section class="text-center md:text-left pt-[77%] md:pt-[8%] px-8 pb-6 md:pb-20">
                         <h1
-                            class="font-LibreBaskerville text-4.5xl lg:text-[64px] font-bold leading-tight mb-[0.2em] md:mb-[0.3em]">
+                            class="font-LibreBaskerville text-4.5xl lg:text-[64px] font-bold leading-tight mb-[0.2em] md:mb-[0.3em] page-heading">
                             即刻體驗 <br />
                             迪士尼真人娛樂 <br />
                             享受無限互動！
                         </h1>
-                        <p class="mb-[2em] md:mb-[1em] lg:text-lg">美女荷官全天候陪玩，自由抖內，實時互動！<br />
+                        <p class="mb-[2em] md:mb-[1em] lg:text-lg" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">美女荷官全天候陪玩，自由抖內，實時互動！<br />
                             每日直播更有正妹陪聊，加上千場體育賽事與頂尖賠率。<br />盡情挑戰博彩極限！</p>
                         <!-- <a href="https://t.me/bwinspt" onclick="goTG()"
                             style="padding-left: 60px; padding-right: 20px;"
@@ -107,7 +117,7 @@
                                                 class="w-full h-full object-contain object-center">
                                         </figure>
                                         <div class="">
-                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">前往註冊</h3>
+                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">1.前往註冊</h3>
                                         </div>
                                     </section>
                                 </a>
@@ -118,11 +128,11 @@
                                     <section class="flex md:flex-wrap items-center md:justify-center">
                                         <figure
                                             class="w-20 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
-                                            <img src="./img/ic_register.svg" alt=""
+                                            <img src="./img/ic_verify.svg" alt=""
                                                 class="w-full h-full object-contain object-center">
                                         </figure>
                                         <div>
-                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">手機驗證</h3>
+                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">2.手機驗證</h3>
                                         </div>
                                     </section>
                                 </a>
@@ -133,11 +143,11 @@
                                     <section class="flex md:flex-wrap items-center md:justify-center">
                                         <figure
                                             class="w-20 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
-                                            <img src="./img/ic_deposit.svg" alt=""
+                                            <img src="./img/ic_money.svg" alt=""
                                                 class="w-full h-full object-contain object-center">
                                         </figure>
                                         <div>
-                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">領取30體驗金</h3>
+                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">3.領取30體驗金</h3>
                                         </div>
                                     </section>
                                 </a>
@@ -148,11 +158,11 @@
                                     <section class="flex md:flex-wrap items-center md:justify-center">
                                         <figure
                                             class="w-20 md:w-24 h-20 md:h-24 mr-5 md:mr-0 shrink-0 md:basis-full md:mb-4">
-                                            <img src="./img/ic_deposit.svg" alt=""
+                                            <img src="./img/ic_discount.svg" alt=""
                                                 class="w-full h-full object-contain object-center">
                                         </figure>
                                         <div>
-                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">首存100%優惠</h3>
+                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">4.首存100%優惠</h3>
                                         </div>
                                     </section>
                                 </a>
@@ -166,7 +176,7 @@
                                                 class="w-full h-full object-contain object-center">
                                         </figure>
                                         <div>
-                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">開始遊戲</h3>
+                                            <h3 class="text-xl md:text-2xl font-extrabold tracking-widest">5.開始遊戲</h3>
                                         </div>
                                     </section>
                                 </a>
@@ -274,10 +284,15 @@
                     </li>
                 </ol>
             </section>
-            <div class="text-center mt-8">
-                <a href="https://ds6688.ds88hk.net/" onclick="goDisney()" target="_blank"
-                    class="inline-block px-8 py-3 bg-chat hover:bg-chat_hover text-white rounded-full text-lg font-semibold">了解更多</a>
-            </div>
+
+            <center>
+                <div class="bg-chat hover:bg-chat_hover shadow-chat rounded-full md:inline-block my-14">
+                    <a href="https://ds6688.ds88hk.net/"
+                        class="block h-[87px] md:w-[330px] lg:w-[380px] bg-no-repeat  bg-contain bg-center"
+                        style="background-image: url('assets/img/btn_chat_2.png');" onclick="goDisney()">
+                    </a>
+                </div>
+            </center>
 
             <center>
                 <br>
@@ -289,7 +304,7 @@
                 <br>
 
                 <div style="max-width: 768px;">
-                    <img src="img/slot_home.png" alt="slots img" class="object-contain object-center">
+                    <img src="img/image-02.png" alt="slots img" class="object-contain object-center">
                     <br>
                     <h4 class="text-white text-center" style="text-shadow:  4px 4px 10px rgba(0, 0, 0, 0.5);">
                         體育博彩遊戲讓你在觀看比賽的同時，增加更多樂趣與刺激！<br>無論是足球、籃球還是賽馬，我們的平台提供多種賭盤選擇，簡單易懂的介面讓你輕鬆下注。<br>隨時隨地掌握最新賽事資訊，立即註冊，享受專屬獎勵，與朋友一同分享體育賭博的樂趣！<br>快來加入我們的行列，贏取豐厚獎金！
@@ -301,11 +316,11 @@
                 <div
                     style="background-color: rgba(0, 0, 0, 0.15); height: 70px; line-height: 30px; width: 80%; max-width: 1000px; border-radius: 10px;">
                     <h4 class="text-white text-2xl font-semibold text-center leading-tight mx-4"
-                        style="padding-top: 20px;">
+                        style="padding-top: 25px;">
                         合作品牌
                     </h4>
                 </div>
-                <br><br>
+                <br>
                 <div class="mx-auto text-center brand-logo" style="margin-bottom: 80px;">
                     <img src="img/slots/logo_sbo_w.webp" alt="SBO Logo" class="inline-block" />
                     <img src="img/slots/logo_afb88_w.webp" alt="AFB88 Logo" class="inline-block" />
@@ -313,13 +328,13 @@
                 </div>
 
                 <br><br>
-                <h4 class="text-sub-200 text-2xl font-semibold text-center leading-tight"
+                <h4 class="text-sub-200 text-3xl lg:text-4.5xl font-semibold text-center leading-tight"
                     style="color: rgba(255, 255, 255, 0.9); text-shadow:  2px 2px 4px rgba(0, 0, 0, 0.5);">
                     線上體驗賭場娛樂，隨時隨地贏大獎
                 </h4>
                 <br>
                 <div style="max-width: 768px;">
-                    <img src="img/casino_img.png" alt="casino img" class="object-contain object-center">
+                    <img src="img/image-01.png" alt="casino img" class="object-contain object-center">
                     <br>
                     <h4 class="text-white text-center" style="text-shadow:  4px 4px 10px rgba(0, 0, 0, 0.5);">
                         各大品牌獨家合作，為玩家打造絕佳新型態真人視訊遊戲體驗。<br>遊戲選擇多樣化，包括備受歡迎的百家樂、骰寶、輪盤等，<br>加上全天侯監控管理，為玩家提供安心穩定而流暢的遊戲環境。<br>百家樂、輪盤、骰寶、龍虎任君暢玩！
@@ -338,11 +353,11 @@
                 <div
                     style="background-color: rgba(0, 0, 0, 0.15); height: 70px; line-height: 30px; width: 80%; max-width: 1000px; border-radius: 10px;">
                     <h4 class="text-white text-2xl font-semibold text-center leading-tight mx-4"
-                        style="padding-top: 20px;">
+                        style="padding-top: 25px;">
                         合作品牌
                     </h4>
                 </div>
-
+                <br>
                 <div class="mx-auto text-center brand-logo" style="margin-bottom: 80px;">
                     <img src="img/slots/logo_ofa_w.webp" alt="EG Logo" class="inline-block" />
                     <img src="img/slots/logo_dg_w.webp" alt="AFB88 Logo" class="inline-block" />
