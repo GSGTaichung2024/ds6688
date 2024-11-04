@@ -97,10 +97,76 @@
             height: auto;
             display: block;
         }
+
+        /* 懸浮式CTA按鈕 */
+        .floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(45deg, #FFD700, #DAA520);
+            padding: 20px;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-cta:hover {
+            background: linear-gradient(45deg, #DAA520, #FFD700);
+        }
+
+        .floating-cta a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .floating-cta a:before {
+            content: "💰";
+            font-size: 30px;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .floating-cta {
+                padding: 15px;
+            }
+            
+            .floating-cta a {
+                font-size: 20px;
+            }
+            
+            .floating-cta a:before {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-bg-900 text-white font-Poppins text-base">
+    <!-- 懸浮式CTA按鈕 -->
+    <div class="floating-cta">
+        <a href="https://ds6688.ds88hk.net/login?id=register" onclick="goDisney()" target="_blank">
+            立即註冊 →
+        </a>
+    </div>
 
     <article
         class="bg-no-repeat bg-[url(&#39;../assets/img/cover_1_m.png&#39;)] md:bg-[url(&#39;../assets/img/cover_1.png&#39;)] bg-[length:100%_auto] md:bg-[length:120%_auto] xl:bg-[length:100%_auto] bg-[center_top]">
@@ -435,8 +501,6 @@
         </footer>
         <!-- /fa-footer 頁面版尾 -->
     </article>
-
-
 </body>
 
 </html>
